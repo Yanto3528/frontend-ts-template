@@ -6,7 +6,7 @@ const DotenvPlugin = require('dotenv-webpack')
 
 module.exports = {
   entry: {
-    app: './src/index.tsx'
+    app: './src/index.tsx',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -63,6 +63,7 @@ module.exports = {
       },
       {
         test: /\.(ts|tsx)?$/,
+        exclude: /node_modules/,
         loader: 'babel-loader',
       },
     ],
