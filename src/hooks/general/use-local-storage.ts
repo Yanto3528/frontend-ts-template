@@ -7,7 +7,9 @@ export function useLocalStorage<T>(key: string, defaultValue: T): [T, Dispatch<S
   })
 
   useEffect(() => {
-    if (state) {
+    if (state === undefined || state === null) {
+      localStorage.removeItem(key)
+    } else {
       localStorage.setItem(key, JSON.stringify(state))
     }
   }, [state, key])

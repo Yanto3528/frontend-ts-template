@@ -87,14 +87,3 @@ export const modalSlideFadeIn: CustomAnimationProps = {
     },
   },
 }
-
-export const infiniteLoading: CustomAnimationProps = {
-  animate: {
-    rotate: 360,
-    transition: {
-      duration: 1,
-      ease: 'linear',
-      loop: Infinity,
-    },
-  },
-}

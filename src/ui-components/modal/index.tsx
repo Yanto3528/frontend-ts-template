@@ -34,7 +34,7 @@ export const Modal: React.FC<ModalProps> & ModalComposition = ({ children, width
 
   return (
     <AnimatePresence>
-      {isOpen ? (
+      {isOpen && (
         <Portal>
           <Overlay onClick={onClose}>
             <Wrapper onClick={onStopPropagation} width={width} variants={modalSlideFadeIn}>
@@ -45,7 +45,7 @@ export const Modal: React.FC<ModalProps> & ModalComposition = ({ children, width
             </Wrapper>
           </Overlay>
         </Portal>
-      ) : null}
+      )}
     </AnimatePresence>
   )
 }
